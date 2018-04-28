@@ -1,0 +1,28 @@
+<div class="card my-4">
+    <h5 class="card-header">Countries</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                    <li ng-repeat="countries in countriesCtrl.countriesList | filter: countriesCtrl.keyword" ng-if="$even">
+                        <a ng-click="countriesCtrl.selectCountry(countries.value)">
+                            {{countries.name}}
+                            <span class="badge badge-primary">{{countries.stationcount}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                    <li ng-repeat="countries in countriesCtrl.countriesList | filter: countriesCtrl.keyword" ng-if="$odd">
+                        <a ng-click="countriesCtrl.selectCountry(countries.value)">
+                            {{countries.name}}
+                            <span class="badge badge-primary">{{countries.stationcount}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

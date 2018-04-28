@@ -1,0 +1,54 @@
+<div class="container">
+
+    <h1 class="mt-4 mb-3">International <small>Radio</small></h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="Home">Home</li>
+    </ol>
+
+    <div class="row">
+        <div class="col-md-4">
+            <search-menu keyword="homeViewCtrl.searchKeyword"></search-menu>
+
+            <countries keyword="homeViewCtrl.searchKeyword"
+                       select-country="homeViewCtrl.selectCountryToDispayRadio"></countries>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-8">
+                <div class="card-header text-muted">
+                    <audio id="audioPlayer" controls src="{{homeViewCtrl.selectedRadio.url}}"></audio>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{homeViewCtrl.country}}</h4>
+                    <table class="table table-sm">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Language</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="radio in homeViewCtrl.selectRadioCountryList">
+                            <td>
+                                <span ng-click="homeViewCtrl.selectRadio(radio)" class="fa fa-play-circle"></span>
+                            </td>
+                            <td><a>{{radio.name}}</a></td>
+                            <td><a>{{radio.language}}</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+</div>
+<!--https://walkingtree.tech/migration-from-angularjs-1-x-to-angular-2/-->
+<!--https://www.quora.com/Is-it-worth-migrating-from-AngularJS-to-Angular-with-a-mid-large-codebase-->
+<!--https://www.pluralsight.com/courses/migrating-applications-angularjs-angular-->
+<!--https://www.uruit.com/blog/2017/07/04/angular-1-vs-2-migrate/-->
+<!--http://sviridovserg.com/2017/09/26/angularjs-migration-to-angular-4/-->
+<!--https://www.intertech.com/Blog/9-lessons-learned-on-an-angularjs-to-angular-4-upgrade/-->
+<!--https://auth0.com/blog/migrating-an-angular-1-app-to-angular-2-part-1/-->

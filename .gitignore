@@ -1,0 +1,7 @@
+node_modules/
+typings/
+coverage/
+.idea/
+build/
+*.iml
+.npm-debug.log
